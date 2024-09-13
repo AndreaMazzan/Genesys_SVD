@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<node>
+    <node id="csr" address="0x0" description="ctrl/stat register" fwinfo="endpoint;width=1">
+        <node id="ctrl" address="0x0">
+            <node id="rst" mask="0x1"/>
+            <node id="nuke" mask="0x2"/>
+            <node id="led" mask="0x4"/>
+            <node id="FSM_reset" mask="0x8"/>
+        </node>
+        <node id="stat" address="0x1"/>
+    </node>
+    <node id="state_reg" address="0x00002" permission="rw" description="read-write register, control FSM" fwinfo="endpoint;width=0"/>
+    <node id="delay_and_duration_reg" address="0x00004" permission="rw" description="read-write register, delays and durations of signals for FSM" fwinfo="endpoint;width=0"/>
+    <node id="asic_pads_reg" address="0x00008" permission="rw" description="read-write register, user driven asic pads" fwinfo="endpoint;width=0"/>
+    <node id="comp_reg" address="0x00010" permission="r" mode="block" size="4" description="comparison result registers" fwinfo="endpoint;width=2"/>
+    <node id="ram" address="0x20000" permission="rw" mode="block" size="0x10000" description="2**16 bits RAM, word_size=1" fwinfo="endpoint;width=17">
+    </node>
+</node>

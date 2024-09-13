@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<node>
+    <node id="csr" address="0x0" description="ctrl/stat register" fwinfo="endpoint;width=1">
+        <node id="ctrl" address="0x0">
+            <node id="rst" mask="0x1"/>
+            <node id="nuke" mask="0x2"/>
+            <node id="led" mask="0x4"/>
+        </node>
+        <node id="stat" address="0x1"/>
+    </node>
+    <node id="reset_reg" address="0x00002" permission="rw" description="read-write register, reset SVD" fwinfo="endpoint;width=0"/>
+    <node id="input_ram" address="0x10000" permission="rw" mode="block" size="0x100" description="4x4 matrix of 32 bits elements" fwinfo="endpoint;width=10">
+    </node>
+    <node id="U_T_ram" address="0x20000" permission="rw" mode="block" size="0x100" description="4x4 matrix of 32 bits elements" fwinfo="endpoint;width=10">
+    </node>
+</node>
