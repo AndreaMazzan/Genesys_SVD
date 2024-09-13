@@ -4,6 +4,41 @@ import uhal
 import numpy as np
 
 
+
+def normalized_gaussian_2D(x_axis, y_axis, mu_x, mu_y, sigma):
+
+    X, Y = np.meshgrid(x_axis, y_axis)
+    Z = (1 / (2 * np.pi * sigma ** 2)) * np.exp(-((X-mu_x) ** 2 + (Y-mu_y) ** 2) / (2 * sigma ** 2))
+    Z /= np.sum(Z)
+    return X,Y,Z
+
+def integrate_over_squares(Z,num_squares_per_side,grid_size,mu_x,mu_y, x_axis,y_axis ):
+
+    max_center_x=(num_squares_per_side-1)/2*grid_size+mu_y
+    max_center_y=(num_squares_per_side-1)/2*grid_size+mu_y
+    square_centers_x = np.linspace(-max_center_x, max_center_x, num_squares_per_side)
+    square_centers_y = np.linspace(-max_center_y, max_center_y, num_squares_per_side)
+
+    integrals = []
+    for center_x in square_centers_x:
+        for center_y in square_centers_y:
+            xmin = center_x - grid_size/2
+            xmax = center_x + grid_size/2
+            ymin = center_y - grid_size/2
+            ymax = center_y + grid_size/2
+
+            x_indices = np.logical_and(x_axis >= xmin, x_axis <= xmax)
+            y_indices = np.logical_and(y_axis >= ymin, y_axis <= ymax)
+
+            integral = np.sum(Z[x_indices, :][:, y_indices])
+            integrals.append(integral)
+    return integrals,square_centers_x,square_centers_y
+
+
+
+
+
+
 # import matplotlib.pyplot as plt
 
 def choose_from_menu(menu):
@@ -59,7 +94,7 @@ def initialize_matrix(n, value_min, value_max):
     
     # Create an n x n matrix with random integer values in the specified range
     # np.random.seed(50)
-    matrix = np.random.randint(value_min, value_max + 1, size=(n, n))
+    matrix = np.random.randint(value_min, value_max, size=(n, n))
     
     # Flatten the matrix to simulate storing it in consecutive rows in RAM
     ram_array = matrix.flatten()
@@ -169,6 +204,21 @@ if __name__ == "__main__":
 	else:
 		mult=2**12
 	
+
+	std_dev=1
+	num_squares_per_side=size
+	grid_size=0.5
+	x = np.linspace(-2, 2, 201)
+	y = np.linspace(-2, 2, 201)
+	X,Y,Z=normalized_gaussian_2D(x, y, 0, 0, std_dev)
+	integrals,square_centers_x,square_centers_y=integrate_over_squares(Z,num_squares_per_side, grid_size, 0, 0,x,y)
+	integrals_matrix = np.array(integrals).reshape(num_squares_per_side, num_squares_per_side)
+	integrals_matrix=integrals_matrix/np.max(integrals_matrix)
+	input_matrix=(integrals_matrix*mult).astype(np.int32)
+	input_matrix=list(input_matrix.flatten())
+
+
+
 	address_file = "file://address_file.xml"
 	my_memory = Memory(address_file)
 	my_memory.write_reg(1,'reset_reg')
@@ -179,7 +229,7 @@ if __name__ == "__main__":
 	my_memory.write_reg(0,'reset_reg')
 	#while my_memory.read_reg('done_reg')==0:
 	#	time.sleep(.00001)
-	time.sleep(1)
+	time.sleep(.1)
 	temp_SIGMA = np.array(my_memory.read_block('input_ram')[:size*size])
 	SIGMA = decode_array_twos_complement(temp_SIGMA, n_bits=32).reshape(size,size)
 	temp_U_T = np.array(my_memory.read_block('U_T_ram')[:size*size])
@@ -188,17 +238,17 @@ if __name__ == "__main__":
 	U_np, S_np, Vt_np = np.linalg.svd(np.array(input_matrix).reshape(size,size))
 	my_memory.write_reg(1,'reset_reg')
 
-	print('Input matrix\n')
-	print(np.array(input_matrix).reshape(size,size))
-	print('\nOutput matrix\n')
-	print(SIGMA)
+	#print('Input matrix\n')
+	#print(np.array(input_matrix).reshape(size,size))
+	#print('\nOutput matrix\n')
+	#print(SIGMA)
 	
-	#print('\nSingular values from firmware\n')
-	#print(np.diag(SIGMA))
-	#print('\nSingular values from Numpy\n')
-	#print(S_np.astype(int))
-	#print('\nOrthonormal basis from firmware\n')
-	#print(U_T.transpose())
-	#print('\nOrthonormal basis from Numpy\n')
-	#print((U_np*mult).astype(int))
+	print('\nSingular values from firmware\n')
+	print(np.diag(SIGMA))
+	print('\nSingular values from Numpy\n')
+	print(S_np.astype(int))
+	print('\nOrthonormal basis from firmware\n')
+	print(U_T.transpose())
+	print('\nOrthonormal basis from Numpy\n')
+	print((U_np*mult).astype(int))
 	

@@ -38,6 +38,8 @@ use IEEE.STD_LOGIC_1164.all;
 use work.ipbus.all;
 
 entity top is generic (
+    DATA_WIDTH : integer := 32;
+    MATRIX_LENGTH : integer := 16;
 	ENABLE_DHCP  : std_logic := '0'; -- Default is build with support for RARP rather than DHCP
 	USE_IPAM     : std_logic := '0'; -- Default is no, use static IP address as specified by ip_addr below
 	--MAC_ADDRESS  : std_logic_vector(47 downto 0) := X"00183E01E5BC" -- Careful here, arbitrary addresses do not always work);
@@ -117,13 +119,17 @@ begin
 -- The ipbus fabric is instantiated within.
 
     payload : entity work.payload
+        generic map(
+            DATA_WIDTH => DATA_WIDTH,
+            MATRIX_LENGTH => MATRIX_LENGTH
+            )
         port map(
             ipb_clk  => clk_ipb,
             ipb_rst  => rst_ipb,
             ipb_in   => ipb_out,
             ipb_out  => ipb_in,
-            clk      => clk_aux,
-            --clk => clk_ipb,
+            --clk      => clk_aux,
+            clk => clk_ipb,
             rst      => rst_aux,
             nuke     => nuke,
             soft_rst => soft_rst,

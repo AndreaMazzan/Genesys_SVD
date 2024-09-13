@@ -25,15 +25,15 @@ architecture Behavioral of main_control is
     -- Signals for main_control
     signal p : integer range 0 to MATRIX_LENGTH-2 := 0;
     signal q : integer range 1 to MATRIX_LENGTH-1 := 1;
-    type state_type is (start_cordic, get_p_q, start_mat_mult, gen_new_pq_pair);
-    signal state : state_type := start_cordic;
+    type state_type is (get_p_q, start_mat_mult, gen_new_pq_pair);
+    signal state : state_type;
 
     -- Signals for LUT counter
     signal lut_enable : std_logic := '0'; -- Changed from port to signal
-    signal sweep_val : integer := 0;  -- Internal signal for LUT output
+    signal sweep_val : integer range 0 to 8;  -- Internal signal for LUT output
 
     -- iteration counter for S_value
-    signal iter_count : integer := 0;
+    signal iter_count : integer range 0 to 9 := 0;
 
 begin
     -- Instantiate the LUT counter
@@ -52,7 +52,7 @@ begin
             cordic_rst <= '1';
             p <= 0;
             q <= 1;
-            state <= start_cordic;
+            state <= get_p_q;
             fetch_valid_cordic <= '0';
             mat_mult_ready <= '0';
             mat_mult_rst <= '1';
@@ -65,12 +65,9 @@ begin
         elsif rising_edge(clk) then
             
             case state is
-                when start_cordic =>
-                    iter_count <= 1; -- start counting iterations based on S_value here
-                    state <= get_p_q;
                     
                 when get_p_q =>
-                    if iter_count < (sweep_val + 1) then 
+                    if iter_count < sweep_val then 
                         if p < MATRIX_LENGTH-1 then
                             output_p <= std_logic_vector(to_unsigned(p, output_p'length));
                             output_q <= std_logic_vector(to_unsigned(q, output_q'length));
@@ -114,7 +111,7 @@ begin
                     end if;
                     
                 when others =>
-                    state <= start_cordic;
+                    state <= get_p_q;
             end case;
         end if;
         

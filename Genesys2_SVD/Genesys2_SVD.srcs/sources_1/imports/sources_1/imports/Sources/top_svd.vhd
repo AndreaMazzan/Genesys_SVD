@@ -5,8 +5,8 @@ use work.utility_pkg.all;
 
 entity top_svd is
     generic (
-        MATRIX_LENGTH : integer := 4;
-        ADDR_WIDTH: integer :=4;
+        MATRIX_LENGTH : integer := 16;
+        ADDR_WIDTH: integer :=8;
         DATA_WIDTH : integer := 32
     );
     
