@@ -127,35 +127,34 @@ begin
         matrix_b(14) <= std_logic_vector(to_signed(15*2**MULT_FACTOR, DATA_WIDTH)); -- B[3][2]
         matrix_b(15) <= std_logic_vector(to_signed(16*2**MULT_FACTOR, DATA_WIDTH)); -- B[3][3]
 
-        -- Reset the design
+        -- Reset the DUT
         rst <= '1';
-        wait for 20 ns;
+        wait for CLK_PERIOD * 2;
         rst <= '0';
-        wait for 20 ns;
 
         -- Start matrix multiplication
         calculate_mat_mult <= '1';
         wait until mat_mult_done = '1';
+        calculate_mat_mult <= '0';
 
-        -- Wait to observe outputs
-        wait for CLK_PERIOD * 10;
+        -- Wait for some time to observe the results
+        wait for CLK_PERIOD * 100;
 
-        -- End of simulation
-        assert false report "End of Test" severity note;
+        -- End simulation
+        assert false report "End of simulation" severity note;
         wait;
     end process;
-    -- Input value assignment based on address
-    process(clk)
+
+    -- Matrix value retrieval for the DUT
+    process (clk)
     begin
         if rising_edge(clk) then
-            -- Assign inputs from matrix storage
             input_matrix_value_a <= matrix_a(to_integer(unsigned(input_address_a)));
             input_matrix_value_b <= matrix_b(to_integer(unsigned(input_address_b)));
-
-            -- Capture the result
             if write_enable_out = '1' then
                 matrix_c(to_integer(unsigned(output_address))) <= output_matrix_value;
             end if;
         end if;
     end process;
+
 end sim;

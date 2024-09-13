@@ -49,44 +49,43 @@ architecture Behavioral of math_unit is
 begin
     mat_mult1 : entity work.mat_mult_v2
     generic map (
-        MULT_FACTOR => MULT_FACTOR,
-        ADDR_WIDTH => ADDR_WIDTH,
-        MATRIX_LENGTH => MATRIX_LENGTH
+        MULT_FACTOR => MULT_FACTOR,        -- Multiplication factor
+        ADDR_WIDTH => ADDR_WIDTH,          -- Address width for matrices
+        MATRIX_LENGTH => MATRIX_LENGTH     -- Size of the matrix
     )
     port map (
-        clk => clk,
-        rst => rst,
-        calculate_mat_mult => calculate_mat_mult,
-        input_address_a => input_address_Jl,
-        input_address_b => input_address_A,
-        output_address => output_address_temp,
-        input_matrix_value_a => input_matrix_value_Jl,
-        input_matrix_value_b => input_matrix_value_A,
-        output_matrix_value => output_value_temp,
-        write_enable_out => write_enable_temp,
-        mat_mult_done => mat1_mult_done
+        clk => clk,                        -- Clock signal
+        rst => rst,                        -- Reset signal
+        calculate_mat_mult => calculate_mat_mult,  -- Start matrix multiplication signal
+        input_address_a => input_address_Jl,      -- Input address for matrix Jl
+        input_address_b => input_address_A,       -- Input address for matrix A
+        output_address => output_address_temp,    -- Temporary address for storing output
+        input_matrix_value_a => input_matrix_value_Jl,  -- Input matrix Jl values
+        input_matrix_value_b => input_matrix_value_A,   -- Input matrix A values
+        output_matrix_value => output_value_temp,       -- Temporary matrix output values
+        write_enable_out => write_enable_temp,    -- Write enable for output matrix
+        mat_mult_done => mat1_mult_done           -- Signal indicating mat_mult1 is done
     );
-    
-    
-        
+
     mat_mult2 : entity work.mat_mult_v2
     generic map (
-        MULT_FACTOR => MULT_FACTOR,
-        ADDR_WIDTH => ADDR_WIDTH,
-        MATRIX_LENGTH => MATRIX_LENGTH
+        MULT_FACTOR => MULT_FACTOR,        -- Multiplication factor
+        ADDR_WIDTH => ADDR_WIDTH,          -- Address width for matrices
+        MATRIX_LENGTH => MATRIX_LENGTH     -- Size of the matrix
     )
     port map (
-        clk => clk,
-        rst => rst,
-        calculate_mat_mult => mat1_mult_done,
-        input_address_a => input_address_matmul2,
-        input_address_b => input_address_Jr,
-        output_address => output_address_A,
-        input_matrix_value_a => input_value_matmul2,
-        input_matrix_value_b => input_matrix_value_Jr,
-        output_matrix_value => output_matrix_value_A,
-        write_enable_out => write_enable_A,
-        mat_mult_done => mat_mult_done 
+        clk => clk,                        -- Clock signal
+        rst => rst,                        -- Reset signal
+        calculate_mat_mult => mat1_mult_done,   -- Trigger when mat_mult1 is done
+        input_address_a => input_address_matmul2,   -- Input address for second matrix multiplication
+        input_address_b => input_address_Jr,        -- Input address for matrix Jr
+        output_address => output_address_A,         -- Address to store output matrix A
+        input_matrix_value_a => input_value_matmul2,   -- Input matrix values for second multiplication
+        input_matrix_value_b => input_matrix_value_Jr, -- Input matrix Jr values
+        output_matrix_value => output_matrix_value_A,  -- Output matrix values for A
+        write_enable_out => write_enable_A,        -- Write enable for matrix A output
+        mat_mult_done => mat_mult_done             -- Signal indicating mat_mult2 is done
     );
+
     first_half_done <= mat1_mult_done;
 end Behavioral;
