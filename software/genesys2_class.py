@@ -222,7 +222,7 @@ if __name__ == "__main__":
 	address_file = "file://address_file.xml"
 	my_memory = Memory(address_file)
 	my_memory.write_reg(1,'reset_reg')
-	input_matrix=initialize_matrix(size, 0, mult)
+	#input_matrix=initialize_matrix(size, 0, mult)
 	initial_U_T=initialize_identity_matrix(size, mult)
 	my_memory.write_block(input_matrix, 'input_ram')
 	my_memory.write_block(initial_U_T, 'U_T_ram')
