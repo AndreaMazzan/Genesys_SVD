@@ -93,7 +93,7 @@ def initialize_matrix(n, value_min, value_max):
         raise ValueError("value_min should be less than or equal to value_max.")
     
     # Create an n x n matrix with random integer values in the specified range
-    # np.random.seed(50)
+    np.random.seed(50)
     matrix = np.random.randint(value_min, value_max, size=(n, n))
     
     # Flatten the matrix to simulate storing it in consecutive rows in RAM
@@ -222,14 +222,14 @@ if __name__ == "__main__":
 	address_file = "file://address_file.xml"
 	my_memory = Memory(address_file)
 	my_memory.write_reg(1,'reset_reg')
-	#input_matrix=initialize_matrix(size, 0, mult)
+	input_matrix=initialize_matrix(size, 0, mult)
 	initial_U_T=initialize_identity_matrix(size, mult)
 	my_memory.write_block(input_matrix, 'input_ram')
 	my_memory.write_block(initial_U_T, 'U_T_ram')
 	my_memory.write_reg(0,'reset_reg')
 	#while my_memory.read_reg('done_reg')==0:
 	#	time.sleep(.00001)
-	time.sleep(.1)
+	time.sleep(3)
 	temp_SIGMA = np.array(my_memory.read_block('input_ram')[:size*size])
 	SIGMA = decode_array_twos_complement(temp_SIGMA, n_bits=32).reshape(size,size)
 	temp_U_T = np.array(my_memory.read_block('U_T_ram')[:size*size])
@@ -238,17 +238,13 @@ if __name__ == "__main__":
 	U_np, S_np, Vt_np = np.linalg.svd(np.array(input_matrix).reshape(size,size))
 	my_memory.write_reg(1,'reset_reg')
 
-	#print('Input matrix\n')
-	#print(np.array(input_matrix).reshape(size,size))
-	#print('\nOutput matrix\n')
-	#print(SIGMA)
+	print('Input matrix\n',np.array(input_matrix).reshape(size,size))
+	print('\nOutput matrix\n',SIGMA)
 	
-	print('\nSingular values from firmware\n')
-	print(np.diag(SIGMA))
-	print('\nSingular values from Numpy\n')
-	print(S_np.astype(int))
-	print('\nOrthonormal basis from firmware\n')
-	print(U_T.transpose())
-	print('\nOrthonormal basis from Numpy\n')
-	print((U_np*mult).astype(int))
+	print('\nSingular values from firmware\n', np.diag(SIGMA))
+	print('\nSingular values from Numpy\n',S_np.astype(int))
+	#print('\nOrthonormal basis from firmware\n')
+	#print(U_T.transpose())
+	#print('\nOrthonormal basis from Numpy\n')
+	#print((U_np*mult).astype(int))
 	

@@ -9,8 +9,8 @@ end tb_mat_mult_v2;
 architecture sim of tb_mat_mult_v2 is
 
     -- Constants
-    constant MULT_FACTOR : integer := 12;
-    constant MATRIX_LENGTH : integer := 4;  -- Adjust to match your design
+    constant MULT_FACTOR : integer := 14;
+    constant MATRIX_LENGTH : integer := 16;  -- Adjust to match your design
     constant CLK_PERIOD : time := 10 ns;
     constant DATA_WIDTH : integer := 32;
 
@@ -33,28 +33,28 @@ architecture sim of tb_mat_mult_v2 is
     signal matrix_b : matrix_array := (others => (others => '0'));
     signal matrix_c : matrix_array := (others => (others => '0'));
 
-    -- DUT (Device Under Test) instance
-    component mat_mult_v2
-        generic (
-            MATRIX_LENGTH : integer := 4;
-            ADDR_WIDTH : integer := 4;
-            MULT_FACTOR : integer := 12;
-            DATA_WIDTH : integer := 32
-        );
-        Port (
-            clk : in  STD_LOGIC;
-            rst : in  STD_LOGIC;
-            calculate_mat_mult : in  STD_LOGIC;
-            input_address_a : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-            input_address_b : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-            output_address : out std_logic_vector(ADDR_WIDTH-1 downto 0);
-            input_matrix_value_a : in std_logic_vector(DATA_WIDTH-1 downto 0);
-            input_matrix_value_b : in std_logic_vector(DATA_WIDTH-1 downto 0);
-            output_matrix_value : out std_logic_vector(DATA_WIDTH-1 downto 0);
-            write_enable_out : out std_logic;
-            mat_mult_done : out std_logic
-        );
-    end component;
+--    -- DUT (Device Under Test) instance
+--    component mat_mult_v2
+--        generic (
+--            MATRIX_LENGTH : integer := 4;
+--            ADDR_WIDTH : integer := 4;
+--            MULT_FACTOR : integer := 12;
+--            DATA_WIDTH : integer := 32
+--        );
+--        Port (
+--            clk : in  STD_LOGIC;
+--            rst : in  STD_LOGIC;
+--            calculate_mat_mult : in  STD_LOGIC;
+--            input_address_a : out std_logic_vector(ADDR_WIDTH-1 downto 0);
+--            input_address_b : out std_logic_vector(ADDR_WIDTH-1 downto 0);
+--            output_address : out std_logic_vector(ADDR_WIDTH-1 downto 0);
+--            input_matrix_value_a : in std_logic_vector(DATA_WIDTH-1 downto 0);
+--            input_matrix_value_b : in std_logic_vector(DATA_WIDTH-1 downto 0);
+--            output_matrix_value : out std_logic_vector(DATA_WIDTH-1 downto 0);
+--            write_enable_out : out std_logic;
+--            mat_mult_done : out std_logic
+--        );
+--    end component;
 
 begin
 
@@ -68,7 +68,7 @@ begin
     end process;
 
     -- Instantiate the DUT
-    uut: mat_mult_v2
+    uut: entity work.mat_mult_v2
         generic map (
             MATRIX_LENGTH => MATRIX_LENGTH,
             ADDR_WIDTH => integer(ceil(log2(real(MATRIX_LENGTH**2)))),
@@ -93,39 +93,39 @@ begin
     process
     begin
         -- Initialize input matrices
-        matrix_a(0) <= std_logic_vector(to_signed(1*2**MULT_FACTOR, DATA_WIDTH));   -- A[0][0]
-        matrix_a(1) <= std_logic_vector(to_signed(2*2**MULT_FACTOR, DATA_WIDTH));   -- A[0][1]
-        matrix_a(2) <= std_logic_vector(to_signed(3*2**MULT_FACTOR, DATA_WIDTH));   -- A[0][2]
-        matrix_a(3) <= std_logic_vector(to_signed(4*2**MULT_FACTOR, DATA_WIDTH));   -- A[0][3]
-        matrix_a(4) <= std_logic_vector(to_signed(5*2**MULT_FACTOR, DATA_WIDTH));   -- A[1][0]
-        matrix_a(5) <= std_logic_vector(to_signed(6*2**MULT_FACTOR, DATA_WIDTH));   -- A[1][1]
-        matrix_a(6) <= std_logic_vector(to_signed(7*2**MULT_FACTOR, DATA_WIDTH));   -- A[1][2]
-        matrix_a(7) <= std_logic_vector(to_signed(8*2**MULT_FACTOR, DATA_WIDTH));   -- A[1][3]
-        matrix_a(8) <= std_logic_vector(to_signed(9*2**MULT_FACTOR, DATA_WIDTH));   -- A[2][0]
-        matrix_a(9) <= std_logic_vector(to_signed(10*2**MULT_FACTOR, DATA_WIDTH));  -- A[2][1]
-        matrix_a(10) <= std_logic_vector(to_signed(11*2**MULT_FACTOR, DATA_WIDTH)); -- A[2][2]
-        matrix_a(11) <= std_logic_vector(to_signed(12*2**MULT_FACTOR, DATA_WIDTH)); -- A[2][3]
-        matrix_a(12) <= std_logic_vector(to_signed(13*2**MULT_FACTOR, DATA_WIDTH)); -- A[3][0]
-        matrix_a(13) <= std_logic_vector(to_signed(14*2**MULT_FACTOR, DATA_WIDTH)); -- A[3][1]
-        matrix_a(14) <= std_logic_vector(to_signed(15*2**MULT_FACTOR, DATA_WIDTH)); -- A[3][2]
-        matrix_a(15) <= std_logic_vector(to_signed(16*2**MULT_FACTOR, DATA_WIDTH)); -- A[3][3]
+        matrix_a(0) <= std_logic_vector(to_signed(2**14, DATA_WIDTH));   -- A[0][0]
+        matrix_a(1) <= std_logic_vector(to_signed(2**13, DATA_WIDTH));   -- A[0][1]
+        matrix_a(2) <= std_logic_vector(to_signed(2**14, DATA_WIDTH));   -- A[0][2]
+        matrix_a(3) <= std_logic_vector(to_signed(2**13, DATA_WIDTH));   -- A[0][3]
+        matrix_a(4) <= std_logic_vector(to_signed(2**14, DATA_WIDTH));   -- A[1][0]
+        matrix_a(5) <= std_logic_vector(to_signed(2**13, DATA_WIDTH));   -- A[1][1]
+        matrix_a(6) <= std_logic_vector(to_signed(2**14, DATA_WIDTH));   -- A[1][2]
+        matrix_a(7) <= std_logic_vector(to_signed(2**13, DATA_WIDTH));   -- A[1][3]
+        matrix_a(8) <= std_logic_vector(to_signed(2**14, DATA_WIDTH));   -- A[2][0]
+        matrix_a(9) <= std_logic_vector(to_signed(2**13, DATA_WIDTH));  -- A[2][1]
+        matrix_a(10) <= std_logic_vector(to_signed(2**14, DATA_WIDTH)); -- A[2][2]
+        matrix_a(11) <= std_logic_vector(to_signed(2**13, DATA_WIDTH)); -- A[2][3]
+        matrix_a(12) <= std_logic_vector(to_signed(2**14, DATA_WIDTH)); -- A[3][0]
+        matrix_a(13) <= std_logic_vector(to_signed(2**13, DATA_WIDTH)); -- A[3][1]
+        matrix_a(14) <= std_logic_vector(to_signed(2**14, DATA_WIDTH)); -- A[3][2]
+        matrix_a(15) <= std_logic_vector(to_signed(2**13, DATA_WIDTH)); -- A[3][3]
 
-        matrix_b(0) <= std_logic_vector(to_signed(1*2**MULT_FACTOR, DATA_WIDTH));   -- B[0][0]
-        matrix_b(1) <= std_logic_vector(to_signed(2*2**MULT_FACTOR, DATA_WIDTH));   -- B[0][1]
-        matrix_b(2) <= std_logic_vector(to_signed(3*2**MULT_FACTOR, DATA_WIDTH));   -- B[0][2]
-        matrix_b(3) <= std_logic_vector(to_signed(4*2**MULT_FACTOR, DATA_WIDTH));   -- B[0][3]
-        matrix_b(4) <= std_logic_vector(to_signed(5*2**MULT_FACTOR, DATA_WIDTH));   -- B[1][0]
-        matrix_b(5) <= std_logic_vector(to_signed(6*2**MULT_FACTOR, DATA_WIDTH));   -- B[1][1]
-        matrix_b(6) <= std_logic_vector(to_signed(7*2**MULT_FACTOR, DATA_WIDTH));   -- B[1][2]
-        matrix_b(7) <= std_logic_vector(to_signed(8*2**MULT_FACTOR, DATA_WIDTH));   -- B[1][3]
-        matrix_b(8) <= std_logic_vector(to_signed(9*2**MULT_FACTOR, DATA_WIDTH));   -- B[2][0]
-        matrix_b(9) <= std_logic_vector(to_signed(10*2**MULT_FACTOR, DATA_WIDTH));  -- B[2][1]
-        matrix_b(10) <= std_logic_vector(to_signed(11*2**MULT_FACTOR, DATA_WIDTH)); -- B[2][2]
-        matrix_b(11) <= std_logic_vector(to_signed(12*2**MULT_FACTOR, DATA_WIDTH)); -- B[2][3]
-        matrix_b(12) <= std_logic_vector(to_signed(13*2**MULT_FACTOR, DATA_WIDTH)); -- B[3][0]
-        matrix_b(13) <= std_logic_vector(to_signed(14*2**MULT_FACTOR, DATA_WIDTH)); -- B[3][1]
-        matrix_b(14) <= std_logic_vector(to_signed(15*2**MULT_FACTOR, DATA_WIDTH)); -- B[3][2]
-        matrix_b(15) <= std_logic_vector(to_signed(16*2**MULT_FACTOR, DATA_WIDTH)); -- B[3][3]
+        matrix_b(0) <= std_logic_vector(to_signed(2**11, DATA_WIDTH));   -- A[0][0]
+        matrix_b(16) <= std_logic_vector(to_signed(2**12, DATA_WIDTH));   -- A[0][1]
+        matrix_b(32) <= std_logic_vector(to_signed(2**11, DATA_WIDTH));   -- A[0][2]
+        matrix_b(48) <= std_logic_vector(to_signed(2**12, DATA_WIDTH));   -- A[0][3]
+        matrix_b(64) <= std_logic_vector(to_signed(2**11, DATA_WIDTH));   -- A[1][0]
+        matrix_b(80) <= std_logic_vector(to_signed(2**12, DATA_WIDTH));   -- A[1][1]
+        matrix_b(96) <= std_logic_vector(to_signed(2**11, DATA_WIDTH));   -- A[1][2]
+        matrix_b(112) <= std_logic_vector(to_signed(2**12, DATA_WIDTH));   -- A[1][3]
+        matrix_b(128) <= std_logic_vector(to_signed(2**11, DATA_WIDTH));   -- A[2][0]
+        matrix_b(144) <= std_logic_vector(to_signed(2**12, DATA_WIDTH));  -- A[2][1]
+        matrix_b(160) <= std_logic_vector(to_signed(2**11, DATA_WIDTH)); -- A[2][2]
+        matrix_b(176) <= std_logic_vector(to_signed(2**12, DATA_WIDTH)); -- A[2][3]
+        matrix_b(192) <= std_logic_vector(to_signed(2**11, DATA_WIDTH)); -- A[3][0]
+        matrix_b(208) <= std_logic_vector(to_signed(2**12, DATA_WIDTH)); -- A[3][1]
+        matrix_b(224) <= std_logic_vector(to_signed(2**11, DATA_WIDTH)); -- A[3][2]
+        matrix_b(240) <= std_logic_vector(to_signed(2**12, DATA_WIDTH)); -- A[3][3]
 
         -- Reset the DUT
         rst <= '1';

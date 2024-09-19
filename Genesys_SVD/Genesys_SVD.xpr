@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2024.1 (64-bit)                              -->
+<!-- Product Version: Vivado v2024.1.1 (64-bit)                              -->
 <!--                                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="C:/ANGELINA/swinburne/Classes/2024/fpga-dev/Genesys_SVD/Genesys_SVD/Genesys_SVD.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="/home/andrea/Documents/Genesys2-SVD-IPbus/Genesys_SVD/Genesys_SVD.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ac4d8691c5204c9a80ae0bc205efca27"/>
@@ -45,7 +45,6 @@
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val=""/>
-    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -60,7 +59,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="33"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -91,14 +90,6 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/software/ipbus_decode_address_file.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Genesys2_SVD_IPbus/software/ipbus_decode_address_file.vhd"/>
-          <Attr Name="ImportTime" Val="1725322405"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/new/calc_mult_factor.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sources_1/new/calc_mult_factor.vhd"/>
@@ -460,6 +451,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/software/ipbus_decode_address_file.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Genesys2_SVD_IPbus/software/ipbus_decode_address_file.vhd"/>
+          <Attr Name="ImportTime" Val="1725322405"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/2023-software-fpga-comm/ipbus_decode_andrea_addresses_block.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../uhal_software/FPGA_comm_with_ASIC/2023-software-fpga-comm/ipbus_decode_andrea_addresses_block.vhd"/>
+          <Attr Name="ImportTime" Val="1708902383"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/ipbus_dpram.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../myFwArea/src/ipbus-firmware/components/ipbus_slaves/firmware/hdl/ipbus_dpram.vhd"/>
@@ -516,24 +524,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/main_control2.vhd">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sources_1/new/main_control2.vhd"/>
-          <Attr Name="ImportTime" Val="1724629691"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/Sources/mat_mult.vhd">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sources_1/imports/Sources/mat_mult.vhd"/>
-          <Attr Name="ImportTime" Val="1724629691"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/sources_1/new/mat_mult_v2.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sources_1/new/mat_mult_v2.vhd"/>
@@ -574,17 +564,27 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/2023-software-fpga-comm/ipbus_decode_andrea_addresses_block.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/new/main_control2.vhd">
         <FileInfo>
-          <Attr Name="Library" Val="xil_defaultlib"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../uhal_software/FPGA_comm_with_ASIC/2023-software-fpga-comm/ipbus_decode_andrea_addresses_block.vhd"/>
-          <Attr Name="ImportTime" Val="1708902383"/>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sources_1/new/main_control2.vhd"/>
+          <Attr Name="ImportTime" Val="1724629691"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/Sources/mat_mult.vhd">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sources_1/imports/Sources/mat_mult.vhd"/>
+          <Attr Name="ImportTime" Val="1724629691"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/ipbus-firmware/components/ipbus_util/firmware/hdl/ipbus_decode_ipbus_example.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../myFwArea/src/ipbus-firmware/components/ipbus_util/firmware/hdl/ipbus_decode_ipbus_example.vhd"/>
           <Attr Name="ImportTime" Val="1707087941"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -634,14 +634,6 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/new/tb_mat_mult_v2.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sim_1/new/tb_mat_mult_v2.vhd"/>
-          <Attr Name="ImportTime" Val="1724826447"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sim_1/imports/new/tb_top_svd.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Genesys2_SVD_IPbus_ToBeDeleted/Genesys2_SVD/Genesys2_SVD.srcs/sim_1/new/tb_top_svd.vhd"/>
@@ -650,9 +642,18 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/imports/new/tb_mat_mult_v2.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../PYNQ_Z2_SVD/SingularValueDecompPrj/SingularValueDecomp.srcs/sim_1/new/tb_mat_mult_v2.vhd"/>
+          <Attr Name="ImportTime" Val="1724826447"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="tb_mat_mult_v2"/>
+        <Option Name="TopModule" Val="tb_top_svd"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -732,11 +733,14 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
+    <Simulator Name="Xcelium">
+      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="22">
@@ -772,7 +776,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 16 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 16 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -785,6 +789,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>

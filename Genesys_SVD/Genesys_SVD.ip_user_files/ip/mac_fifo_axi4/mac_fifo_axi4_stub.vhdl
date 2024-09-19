@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
--- Date        : Mon Aug 19 16:33:13 2024
+-- Tool Version: Vivado v.2024.1.1 (lin64) Build 5094488 Fri Jun 14 08:57:50 MDT 2024
+-- Date        : Fri Sep 13 17:11:42 2024
 -- Host        : localhost.localdomain running 64-bit CentOS Linux release 7.9.2009 (Core)
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/andrea/Documents/uhal_software/FPGA_comm_with_ASIC/2023-firmware-fpga-comm/new_firmware/genesys2_AM_28nm/genesys2_AM_28nm.gen/sources_1/ip/mac_fifo_axi4/mac_fifo_axi4_stub.vhdl
+--               /home/andrea/Documents/Genesys2-SVD-IPbus/Genesys_SVD/Genesys_SVD.gen/sources_1/ip/mac_fifo_axi4/mac_fifo_axi4_stub.vhdl
 -- Design      : mac_fifo_axi4
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2

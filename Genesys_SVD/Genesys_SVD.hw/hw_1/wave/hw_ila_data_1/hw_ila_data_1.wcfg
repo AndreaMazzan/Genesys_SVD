@@ -9,15 +9,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="9"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomStartTime time="7,458"></ZoomStartTime>
+      <ZoomEndTime time="7,508"></ZoomEndTime>
+      <Cursor1Time time="7,480"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="281"></NameColumnWidth>
-      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="8" />
+   <wave_markers>
+   </wave_markers>
    <wvobject type="array" fp_name="payload/top_SVD/main_control/iter_count_reg">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">payload/top_SVD/main_control/iter_count_reg[3:0]</obj_property>
@@ -26,34 +28,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="payload/top_SVD/matmult_address_A_out">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">payload/top_SVD/matmult_address_A_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">matmult_address_A_out[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="payload/top_SVD/signal_p">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">payload/top_SVD/signal_p[3:0]</obj_property>
       <obj_property name="ObjectShortName">signal_p[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="payload/top_SVD/matmult_matrix_value_JL">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">payload/top_SVD/matmult_matrix_value_JL[31:0]</obj_property>
-      <obj_property name="ObjectShortName">matmult_matrix_value_JL[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="payload/top_SVD/d_in_ram">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">payload/top_SVD/d_in_ram[31:0]</obj_property>
-      <obj_property name="ObjectShortName">d_in_ram[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -74,14 +52,6 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="payload/top_SVD/matmult_matrix_value_JR">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">payload/top_SVD/matmult_matrix_value_JR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">matmult_matrix_value_JR[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="payload/top_SVD/mat_mult_done">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">payload/top_SVD/mat_mult_done</obj_property>
@@ -90,11 +60,26 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="payload/top_SVD/mat_mult_ready">
+   <wvobject type="array" fp_name="payload/d_in_ram">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">payload/top_SVD/mat_mult_ready</obj_property>
-      <obj_property name="ObjectShortName">mat_mult_ready</obj_property>
+      <obj_property name="ElementShortName">payload/d_in_ram[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_in_ram[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="payload/addr_in_ram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">payload/addr_in_ram[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_in_ram[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="payload/write_enable_in_ram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">payload/write_enable_in_ram</obj_property>
+      <obj_property name="ObjectShortName">write_enable_in_ram</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
