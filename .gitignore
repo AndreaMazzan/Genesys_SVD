@@ -1,2 +1,10 @@
 Genesys2_SVD/Genesys2_SVD.runs/
 Genesys2_SVD/Genesys2_SVD.sim/
+.sim/
+.runs/
+.cache/
+.ip_user_files/
+*.dcp
+*.wdb
+*.log
+*.jou
