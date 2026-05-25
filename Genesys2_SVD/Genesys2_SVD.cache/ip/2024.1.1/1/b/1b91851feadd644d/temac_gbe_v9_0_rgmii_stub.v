@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1.1 (lin64) Build 5094488 Fri Jun 14 08:57:50 MDT 2024
-// Date        : Mon May 25 15:27:36 2026
+// Date        : Mon May 25 15:27:34 2026
 // Host        : leonardo running 64-bit Rocky Linux release 8.10 (Green Obsidian)
-// Command     : write_verilog -force -mode synth_stub
-//               /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/temac_gbe_v9_0_rgmii/temac_gbe_v9_0_rgmii_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ temac_gbe_v9_0_rgmii_stub.v
 // Design      : temac_gbe_v9_0_rgmii
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7k325tffg900-2
@@ -15,7 +15,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "temac_gbe_v9_0_rgmii_block,Vivado 2024.1" *)
-module temac_gbe_v9_0_rgmii(gtx_clk, gtx_clk90, glbl_rstn, rx_axi_rstn, 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(gtx_clk, gtx_clk90, glbl_rstn, rx_axi_rstn, 
   tx_axi_rstn, rx_statistics_vector, rx_statistics_valid, rx_mac_aclk, rx_reset, 
   rx_axis_mac_tdata, rx_axis_mac_tvalid, rx_axis_mac_tlast, rx_axis_mac_tuser, 
   tx_ifg_delay, tx_statistics_vector, tx_statistics_valid, tx_mac_aclk, tx_reset, 

@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1.1 (lin64) Build 5094488 Fri Jun 14 08:57:50 MDT 2024
--- Date        : Mon May 25 15:27:36 2026
+-- Date        : Mon May 25 15:27:34 2026
 -- Host        : leonardo running 64-bit Rocky Linux release 8.10 (Green Obsidian)
--- Command     : write_vhdl -force -mode synth_stub
---               /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/temac_gbe_v9_0_rgmii/temac_gbe_v9_0_rgmii_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ temac_gbe_v9_0_rgmii_stub.vhdl
 -- Design      : temac_gbe_v9_0_rgmii
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2
@@ -13,7 +13,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity temac_gbe_v9_0_rgmii is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     gtx_clk : in STD_LOGIC;
     gtx_clk90 : in STD_LOGIC;
@@ -55,9 +55,9 @@ entity temac_gbe_v9_0_rgmii is
     tx_configuration_vector : in STD_LOGIC_VECTOR ( 79 downto 0 )
   );
 
-end temac_gbe_v9_0_rgmii;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture stub of temac_gbe_v9_0_rgmii is
+architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;

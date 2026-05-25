@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1.1 (lin64) Build 5094488 Fri Jun 14 08:57:50 MDT 2024
-// Date        : Mon May 25 15:27:32 2026
+// Date        : Mon May 25 15:27:31 2026
 // Host        : leonardo running 64-bit Rocky Linux release 8.10 (Green Obsidian)
-// Command     : write_verilog -force -mode synth_stub
-//               /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/mac_fifo_axi4/mac_fifo_axi4_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ mac_fifo_axi4_stub.v
 // Design      : mac_fifo_axi4
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7k325tffg900-2
@@ -15,7 +15,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "fifo_generator_v13_2_10,Vivado 2024.1" *)
-module mac_fifo_axi4(wr_rst_busy, rd_rst_busy, m_aclk, s_aclk, 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(wr_rst_busy, rd_rst_busy, m_aclk, s_aclk, 
   s_aresetn, s_axis_tvalid, s_axis_tready, s_axis_tdata, s_axis_tlast, s_axis_tuser, 
   m_axis_tvalid, m_axis_tready, m_axis_tdata, m_axis_tlast, m_axis_tuser)
 /* synthesis syn_black_box black_box_pad_pin="wr_rst_busy,rd_rst_busy,s_aresetn,s_axis_tvalid,s_axis_tready,s_axis_tdata[7:0],s_axis_tlast,s_axis_tuser[0:0],m_axis_tvalid,m_axis_tready,m_axis_tdata[7:0],m_axis_tlast,m_axis_tuser[0:0]" */

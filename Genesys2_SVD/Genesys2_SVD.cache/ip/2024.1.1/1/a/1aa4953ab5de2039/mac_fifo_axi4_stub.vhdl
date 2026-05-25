@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1.1 (lin64) Build 5094488 Fri Jun 14 08:57:50 MDT 2024
--- Date        : Mon May 25 15:27:32 2026
+-- Date        : Mon May 25 15:27:31 2026
 -- Host        : leonardo running 64-bit Rocky Linux release 8.10 (Green Obsidian)
--- Command     : write_vhdl -force -mode synth_stub
---               /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/mac_fifo_axi4/mac_fifo_axi4_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ mac_fifo_axi4_stub.vhdl
 -- Design      : mac_fifo_axi4
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2
@@ -13,7 +13,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity mac_fifo_axi4 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     wr_rst_busy : out STD_LOGIC;
     rd_rst_busy : out STD_LOGIC;
@@ -32,9 +32,9 @@ entity mac_fifo_axi4 is
     m_axis_tuser : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
 
-end mac_fifo_axi4;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture stub of mac_fifo_axi4 is
+architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
