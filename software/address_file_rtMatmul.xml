@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<node>
+    <node id="csr" address="0x0" description="ctrl/stat register">
+        <node id="ctrl" address="0x0" fwinfo="endpoint;width=1">
+            <node id="rst" mask="0x1"/>
+            <node id="nuke" mask="0x2"/>
+            <node id="led" mask="0x4"/>
+            <node id="MAT_RST" mask="0x8"/>
+            <node id="MAT_start" mask="0x10"/>
+            
+        </node>
+        <node id="stat" address="0x2" fwinfo="endpoint;width=1">
+			<node id="MAT_finished" mask="0x1"/>
+		</node>
+	</node>
+	<node id="input_A_RAM" address="0x10000" permission="rw" mode="block" size="256" description="2**16 bits RAM, word_size=1" fwinfo="endpoint;width=10"/>
+	<node id="input_B_RAM" address="0x20000" permission="rw" mode="block" size="256" description="2**16 bits RAM, word_size=1" fwinfo="endpoint;width=10"/>
+	<node id="output_C_RAM" address="0x40000" permission="rw" mode="block" size="256" description="2**16 bits RAM, word_size=1" fwinfo="endpoint;width=10"/>
+</node>

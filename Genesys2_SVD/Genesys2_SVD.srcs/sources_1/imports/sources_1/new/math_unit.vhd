@@ -49,6 +49,7 @@ architecture Behavioral of math_unit is
 begin
     mat_mult1 : entity work.mat_mult_v2
     generic map (
+        DATA_WIDTH => DATA_WIDTH,
         MULT_FACTOR => MULT_FACTOR,
         ADDR_WIDTH => ADDR_WIDTH,
         MATRIX_LENGTH => MATRIX_LENGTH
@@ -71,6 +72,7 @@ begin
         
     mat_mult2 : entity work.mat_mult_v2
     generic map (
+        DATA_WIDTH => DATA_WIDTH,
         MULT_FACTOR => MULT_FACTOR,
         ADDR_WIDTH => ADDR_WIDTH,
         MATRIX_LENGTH => MATRIX_LENGTH

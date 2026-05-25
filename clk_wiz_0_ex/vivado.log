@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:57:50 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Fri Aug  8 15:56:16 2025
+# Process ID: 3429007
+# Current directory: /FPGA_projects/Genesys2_SVD/clk_wiz_0_ex
+# Command line: vivado -notrace -source /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ex.tcl
+# Log file: /FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/vivado.log
+# Journal file: /FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/vivado.jou
+# Running On        :leonardo
+# Platform          :Rocky
+# Operating System  :Rocky Linux release 8.10 (Green Obsidian)
+# Processor Detail  :Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz
+# CPU Frequency     :3000.000 MHz
+# CPU Physical cores:18
+# CPU Logical cores :36
+# Host memory       :134300 MB
+# Swap memory       :4294 MB
+# Total Virtual     :138594 MB
+# Available Virtual :126745 MB
+#-----------------------------------------------------------
+start_gui
+source /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ex.tcl -notrace
+INFO: [open_example_project] Creating new example project...
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 8356.016 ; gain = 400.828 ; free physical = 86430 ; free virtual = 119847
+INFO: [open_example_project] Importing original IP ...
+INFO: [open_example_project] Generating the example project IP ...
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'clk_wiz_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'clk_wiz_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'clk_wiz_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'clk_wiz_0'. Target already exists and is up to date.
+INFO: [open_example_project] Adding example synthesis HDL files ...
+INFO: [open_example_project] Adding example XDC files ...
+INFO: [open_example_project] Adding simulation HDL files ...
+INFO: [open_example_project] Adding simulation miscellaneous files ...
+INFO: [open_example_project] Rebuilding top IP...
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (AMD Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/opt/Xilinx/Vivado/2024.1/data/xsim'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/xsim/clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Siemens ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.cache/compile_simlib/modelsim'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/modelsim/clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Siemens Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.cache/compile_simlib/questa'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/questa/clk_wiz_0.sh'
+INFO: [exportsim-Tcl-5] Generating 3-step script for 'xcelium'. To create a single-step script, use the -single_step switch.
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.cache/compile_simlib/xcelium'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/xcelium/clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.cache/compile_simlib/vcs'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/vcs/clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.cache/compile_simlib/riviera'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/riviera/clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.cache/compile_simlib/activehdl'
+INFO: [exportsim-Tcl-29] Script generated: '/FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/clk_wiz_0_ex.ip_user_files/sim_scripts/clk_wiz_0/activehdl/clk_wiz_0.sh'
+INFO: [open_example_project] Open Example Project completed
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  8 15:57:21 2025...

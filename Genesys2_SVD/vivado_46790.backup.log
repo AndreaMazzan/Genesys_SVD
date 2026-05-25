@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:57:50 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Thu Oct 31 15:40:35 2024
+# Process ID: 46790
+# Current directory: /home/andrea/Documents/Genesys2_SVD_IPbus_ToBeDeleted/Genesys2_SVD
+# Command line: vivado Genesys2_SVD.xpr
+# Log file: /home/andrea/Documents/Genesys2_SVD_IPbus_ToBeDeleted/Genesys2_SVD/vivado.log
+# Journal file: /home/andrea/Documents/Genesys2_SVD_IPbus_ToBeDeleted/Genesys2_SVD/vivado.jou
+# Running On        :localhost.localdomain
+# Platform          :CentOS
+# Operating System  :CentOS Linux release 7.9.2009 (Core)
+# Processor Detail  :Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz
+# CPU Frequency     :1199.890 MHz
+# CPU Physical cores:18
+# CPU Logical cores :36
+# Host memory       :134862 MB
+# Swap memory       :4294 MB
+# Total Virtual     :139157 MB
+# Available Virtual :98508 MB
+#-----------------------------------------------------------
+WARNING: [Runs 36-547] User Strategy 'Vivado Synthesis Defaults' from file '/home/andrea/.Xilinx/Vivado/2024.1/strategies/Vivado Synthesis Defaults.Vivado Synthesis 2023.psg' discarded because strategy with same name already parsed from '/home/admin/Xilinx/Vivado/2024.1/strategies/VDS2023.psg'
+WARNING: [Runs 36-547] User Strategy 'Vivado Synthesis Defaults' from file '/home/andrea/.Xilinx/Vivado/2024.1/strategies/Vivado Synthesis Defaults_2.Vivado Synthesis 2023.psg' discarded because strategy with same name already parsed from '/home/admin/Xilinx/Vivado/2024.1/strategies/VDS2023.psg'
+start_gui
+open_project Genesys2_SVD.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/admin/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/admin/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [IP_Flow 19-11772] Failed to register IP shared directory path '/home/andrea/Documents/Genesys2_SVD_IPbus_ToBeDeleted/Genesys2_SVD/kc705_gmii.gen/sources_1/ip/mac_fifo_axi4/' for IP 'mac_fifo_axi4'.
+WARNING: [IP_Flow 19-11772] Failed to register IP shared directory path '/home/andrea/Documents/Genesys2_SVD_IPbus_ToBeDeleted/Genesys2_SVD/genesys2.gen/sources_1/ip/temac_gbe_v9_0_rgmii/' for IP 'temac_gbe_v9_0_rgmii'.
+WARNING: [IP_Flow 19-2162] IP 'temac_gbe_v9_0_rgmii' is locked:
+* IP definition 'Tri Mode Ethernet MAC (9.0)' for IP 'temac_gbe_v9_0_rgmii' (customized with software release 2024.1) has a different revision in the IP Catalog.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 8412.172 ; gain = 558.383 ; free physical = 3279 ; free virtual = 92860
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 31 15:42:53 2024...

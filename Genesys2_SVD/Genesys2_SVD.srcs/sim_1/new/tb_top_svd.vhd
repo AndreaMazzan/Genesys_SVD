@@ -11,7 +11,7 @@ architecture sim of tb_top_svd is
     -- Constants
     --constant MULT_FACTOR : integer := 14;
     constant MATRIX_LENGTH : integer := 16;  -- Adjust to match your design
-    constant CLK_PERIOD : time := 10 ns;
+    constant CLK_PERIOD : time := 8 ns;
     constant DATA_WIDTH : integer := 32;
 
     -- Signals

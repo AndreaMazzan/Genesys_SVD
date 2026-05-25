@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:57:50 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Sat Jul 19 02:30:59 2025
+# Process ID: 2500473
+# Current directory: /FPGA_projects/Genesys2_SVD/Genesys2_SVD
+# Command line: vivado Genesys2_SVD.xpr
+# Log file: /FPGA_projects/Genesys2_SVD/Genesys2_SVD/vivado.log
+# Journal file: /FPGA_projects/Genesys2_SVD/Genesys2_SVD/vivado.jou
+# Running On        :leonardo
+# Platform          :Rocky
+# Operating System  :Rocky Linux release 8.10 (Green Obsidian)
+# Processor Detail  :Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz
+# CPU Frequency     :3000.000 MHz
+# CPU Physical cores:18
+# CPU Logical cores :36
+# Host memory       :134300 MB
+# Swap memory       :4294 MB
+# Total Virtual     :138594 MB
+# Available Virtual :131415 MB
+#-----------------------------------------------------------
+start_gui
+open_project Genesys2_SVD.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [IP_Flow 19-11772] Failed to register IP shared directory path '/FPGA_projects/Genesys2_SVD/Genesys2_SVD/kc705_gmii.gen/sources_1/ip/mac_fifo_axi4/' for IP 'mac_fifo_axi4'.
+WARNING: [IP_Flow 19-11772] Failed to register IP shared directory path '/FPGA_projects/Genesys2_SVD/Genesys2_SVD/genesys2.gen/sources_1/ip/temac_gbe_v9_0_rgmii/' for IP 'temac_gbe_v9_0_rgmii'.
+WARNING: [IP_Flow 19-2162] IP 'temac_gbe_v9_0_rgmii' is locked:
+* IP definition 'Tri Mode Ethernet MAC (9.0)' for IP 'temac_gbe_v9_0_rgmii' (customized with software release 2024.1) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-5178] IP temac_gbe_v9_0_rgmii will not be generated with lower license level. If you would like to generate with the current available license levels, please reset and regenerate.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 8528.113 ; gain = 575.242 ; free physical = 947 ; free virtual = 124187
+launch_runs impl_1 -jobs 18
+[Sat Jul 19 02:31:50 2025] Launched impl_1...
+Run output will be captured here: /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Device 21-9227] Part: xc7k325tffg900-2 does not have CEAM library.
+Netlist sorting complete. Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.3 . Memory (MB): peak = 8973.938 ; gain = 0.000 ; free physical = 3833 ; free virtual = 123827
+INFO: [Netlist 29-17] Analyzing 21032 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 9083.250 ; gain = 12.750 ; free physical = 3723 ; free virtual = 123716
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 9842.562 ; gain = 0.000 ; free physical = 3038 ; free virtual = 123032
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9842.562 ; gain = 0.000 ; free physical = 3038 ; free virtual = 123032
+Read PlaceDB: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 9982.570 ; gain = 140.008 ; free physical = 2905 ; free virtual = 122899
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9982.570 ; gain = 0.000 ; free physical = 2905 ; free virtual = 122899
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.62 . Memory (MB): peak = 10044.602 ; gain = 62.031 ; free physical = 2842 ; free virtual = 122836
+Read Physdb Files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 10044.602 ; gain = 202.039 ; free physical = 2842 ; free virtual = 122836
+Restored from archive | CPU: 6.780000 secs | Memory: 181.852890 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 10044.602 ; gain = 202.039 ; free physical = 2842 ; free virtual = 122836
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 10044.602 ; gain = 0.000 ; free physical = 2843 ; free virtual = 122837
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
+
+open_run: Time (s): cpu = 00:00:37 ; elapsed = 00:00:25 . Memory (MB): peak = 10308.090 ; gain = 1779.914 ; free physical = 2652 ; free virtual = 122652
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 19 02:46:51 2025...

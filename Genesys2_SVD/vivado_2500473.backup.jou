@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:57:50 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Sat Jul 19 02:30:59 2025
+# Process ID: 2500473
+# Current directory: /FPGA_projects/Genesys2_SVD/Genesys2_SVD
+# Command line: vivado Genesys2_SVD.xpr
+# Log file: /FPGA_projects/Genesys2_SVD/Genesys2_SVD/vivado.log
+# Journal file: /FPGA_projects/Genesys2_SVD/Genesys2_SVD/vivado.jou
+# Running On        :leonardo
+# Platform          :Rocky
+# Operating System  :Rocky Linux release 8.10 (Green Obsidian)
+# Processor Detail  :Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz
+# CPU Frequency     :3000.000 MHz
+# CPU Physical cores:18
+# CPU Logical cores :36
+# Host memory       :134300 MB
+# Swap memory       :4294 MB
+# Total Virtual     :138594 MB
+# Available Virtual :131415 MB
+#-----------------------------------------------------------
+start_gui
+open_project Genesys2_SVD.xpr
+launch_runs impl_1 -jobs 18
+wait_on_run impl_1
+open_run impl_1

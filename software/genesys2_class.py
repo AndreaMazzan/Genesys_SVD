@@ -4,41 +4,6 @@ import uhal
 import numpy as np
 
 
-
-def normalized_gaussian_2D(x_axis, y_axis, mu_x, mu_y, sigma):
-
-    X, Y = np.meshgrid(x_axis, y_axis)
-    Z = (1 / (2 * np.pi * sigma ** 2)) * np.exp(-((X-mu_x) ** 2 + (Y-mu_y) ** 2) / (2 * sigma ** 2))
-    Z /= np.sum(Z)
-    return X,Y,Z
-
-def integrate_over_squares(Z,num_squares_per_side,grid_size,mu_x,mu_y, x_axis,y_axis ):
-
-    max_center_x=(num_squares_per_side-1)/2*grid_size+mu_y
-    max_center_y=(num_squares_per_side-1)/2*grid_size+mu_y
-    square_centers_x = np.linspace(-max_center_x, max_center_x, num_squares_per_side)
-    square_centers_y = np.linspace(-max_center_y, max_center_y, num_squares_per_side)
-
-    integrals = []
-    for center_x in square_centers_x:
-        for center_y in square_centers_y:
-            xmin = center_x - grid_size/2
-            xmax = center_x + grid_size/2
-            ymin = center_y - grid_size/2
-            ymax = center_y + grid_size/2
-
-            x_indices = np.logical_and(x_axis >= xmin, x_axis <= xmax)
-            y_indices = np.logical_and(y_axis >= ymin, y_axis <= ymax)
-
-            integral = np.sum(Z[x_indices, :][:, y_indices])
-            integrals.append(integral)
-    return integrals,square_centers_x,square_centers_y
-
-
-
-
-
-
 # import matplotlib.pyplot as plt
 
 def choose_from_menu(menu):
@@ -194,7 +159,7 @@ class Memory:
 
 if __name__ == "__main__":
 
-	size=16
+	size=13
 	if size >=2 and size <=4:
 		mult=2**15
 	elif size >4 and size <=16:
@@ -205,18 +170,7 @@ if __name__ == "__main__":
 		mult=2**12
 	
 
-	std_dev=1
-	num_squares_per_side=size
-	grid_size=0.5
-	x = np.linspace(-2, 2, 201)
-	y = np.linspace(-2, 2, 201)
-	X,Y,Z=normalized_gaussian_2D(x, y, 0, 0, std_dev)
-	integrals,square_centers_x,square_centers_y=integrate_over_squares(Z,num_squares_per_side, grid_size, 0, 0,x,y)
-	integrals_matrix = np.array(integrals).reshape(num_squares_per_side, num_squares_per_side)
-	integrals_matrix=integrals_matrix/np.max(integrals_matrix)
-	input_matrix=(integrals_matrix*mult).astype(np.int32)
-	input_matrix=list(input_matrix.flatten())
-
+	
 
 
 	address_file = "file://address_file.xml"

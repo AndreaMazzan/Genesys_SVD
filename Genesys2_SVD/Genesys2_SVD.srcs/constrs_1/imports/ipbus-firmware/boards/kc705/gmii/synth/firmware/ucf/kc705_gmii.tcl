@@ -145,7 +145,7 @@ set_property PACKAGE_PIN AH24 [get_ports {phy_rst}]
 #set_property IOSTANDARD LVCMOS18 [get_ports clk_mon]
 
 
-
+#create_generated_clock -name clk_35_cstr -source [get_pins your_instance_name/clk_in1] [get_pins your_instance_name/clk_out1]
 # IPbus clock
 create_generated_clock -name ipbus_clk -source [get_pins infra/clocks/mmcm/CLKIN1] [get_pins infra/clocks/mmcm/CLKOUT3]
 

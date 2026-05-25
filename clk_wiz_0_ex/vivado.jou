@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.1 (64-bit)
+# SW Build 5094488 on Fri Jun 14 08:57:50 MDT 2024
+# IP Build 5091682 on Fri Jun 14 16:55:04 MDT 2024
+# SharedData Build 5094118 on Fri Jun 14 01:09:43 MDT 2024
+# Start of session at: Fri Aug  8 15:56:16 2025
+# Process ID: 3429007
+# Current directory: /FPGA_projects/Genesys2_SVD/clk_wiz_0_ex
+# Command line: vivado -notrace -source /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ex.tcl
+# Log file: /FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/vivado.log
+# Journal file: /FPGA_projects/Genesys2_SVD/clk_wiz_0_ex/vivado.jou
+# Running On        :leonardo
+# Platform          :Rocky
+# Operating System  :Rocky Linux release 8.10 (Green Obsidian)
+# Processor Detail  :Intel(R) Xeon(R) W-2295 CPU @ 3.00GHz
+# CPU Frequency     :3000.000 MHz
+# CPU Physical cores:18
+# CPU Logical cores :36
+# Host memory       :134300 MB
+# Swap memory       :4294 MB
+# Total Virtual     :138594 MB
+# Available Virtual :126745 MB
+#-----------------------------------------------------------
+start_gui
+source /FPGA_projects/Genesys2_SVD/Genesys2_SVD/Genesys2_SVD.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
